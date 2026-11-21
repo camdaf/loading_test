@@ -59,7 +59,7 @@ export default function App() {
       setAviso({ tipo: "ok", texto: "Solicitação atualizada." });
     } else {
       const nova = await api.criar(dados);
-      setAviso({ tipo: "ok", texto: `Solicitação ${nova.id} registrada como Aberta.` });
+      setAviso({ tipo: "ok", texto: `Solicitação ${nova.titulo} registrada` });
     }
     await carregar();
   }
